@@ -5,8 +5,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     width: 100%;
-    max-width: 450px;
-    margin-top: 2rem auto !important; /* Centers horizontally */
+    max-width: 450px;/* Centers horizontally */
 }
 
 /* Header */
@@ -96,7 +95,6 @@
 /* Responsive */
 @media (max-width: 500px) {
     .login-container {
-        padding: 1.5rem;
-        margin: 1rem auto !important; /* ensures center + top margin for mobile */
+        padding: 1.5rem;/* ensures center + top margin for mobile */
     }
 }
