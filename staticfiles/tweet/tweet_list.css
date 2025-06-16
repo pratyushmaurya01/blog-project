@@ -1,0 +1,27 @@
+  .tweet-card {
+    width: 100%;
+    max-width: 360px;
+    height: 460px;
+    background-color: #ffffffa8;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+  }
+
+  .tweet-card .card-img-top {
+    height: 240px;
+    object-fit: cover;
+  }
+ .card-title{
+    color: rgb(0, 116, 124);
+  }
+  .text-truncate-multiline {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+
+  .like{
+    color:blue;
+  }

@@ -1,0 +1,70 @@
+body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+        .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #ffffffa8;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+    
+    .form-control{
+      margin-top:0;
+    }
+
+    
+    .image-wrapper {
+      height: 400px;
+      width: 100%;
+      overflow: hidden;
+      background-color: #ffffffa8;
+    }
+    
+
+    .image-wrapper img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .description {
+      font-size: 20px;
+      font-weight: 600;
+      color: rgb(0, 0, 0);
+      margin-bottom: 10px;
+    }
+
+    
+
+    .paragraph {
+      font-size: 16px;
+      color: rgb(43, 32, 32);
+      line-height:1.6;
+      margin-left:13px;
+    }
+
+
+
+    .btn:hover {
+      background-color: #476a8f;
+      color: rgb(0, 0, 0);
+    }
+
+    .backbtn{
+     color: rgb(0, 0, 0) !important;
+    }
+
+    @media (max-width: 600px) {
+      .image-wrapper {
+        height: 250px;
+      }
+    }

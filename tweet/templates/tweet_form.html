@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+tweet page
+{% endblock %}
+
+
+{% block style %}
+   <link rel="stylesheet" href="{% static 'tweet/tweet_form.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<form method = "post" enctype="multipart/form-data" class = "form">
+    <h2>
+    {% if form.instance.pk %}
+    Edit Your Blog
+    {% else %}
+    Create Your Blog
+    {% endif %}
+</h2>
+
+   {% csrf_token %}
+   {{form.as_p}}
+   <button class = "btn btn-warning"  type = "submit">
+    Submit
+   </button>
+</form>
+
+{% endblock %}

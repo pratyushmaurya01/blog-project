@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+del Page
+{% endblock %}
+
+
+{% block style %}
+   <link rel="stylesheet" href="{% static 'tweet/tweet_conf_del.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="content">
+
+<h1 class = "text-center mt-4"  style = "color:black;">
+    Are you sure That you want to Delete the Blog....?
+</h1>
+
+<form method="post">
+    {% csrf_token %}
+<button class="btn btn-danger">Delete</button>
+<a class = "btn btn-success" href="{% url 'tweet_list' %}">
+    cancel
+</a>
+</form>
+</div>
+
+{% endblock %}

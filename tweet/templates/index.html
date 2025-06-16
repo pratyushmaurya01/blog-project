@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+first Page
+{% endblock %}
+
+
+{% block style %}
+   <link rel="stylesheet" href="{% static 'tweet/landing.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+  <header>
+    <h1>Welcome!  to share Your Blogs, Photos & Amazing Views </h1>
+    <p>Share your moments with the world! Add pictures, write beautiful descriptions, and manage your own personal photo blog easily. Connect, express, and enjoy.</p>
+    <div class="buttons">
+      <a href="{% url 'tweet_list' %}">Go to Main Page</a>
+      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'register' %}">Register</a>
+    </div>
+  </header>
+
+  <footer>
+    <p>Made with <span>&hearts;</span> by Pratyush</p>
+  </footer>
+
+{% endblock %}
