@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
-import cloudinary_storage
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +40,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'cloudinary',
     'cloudinary_storage',
+    'psycopg2',
 ]
 
 MIDDLEWARE = [
@@ -87,8 +87,12 @@ CLOUDINARY_STORAGE = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blogdata',
+        'USER': 'postgres',
+        'PASSWORD': 'anshu143',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
