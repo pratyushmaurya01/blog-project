@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zsb(r^#)9s^sz)74@m*ps^(mqjk#ddbrgg*(f=@vvd$q^v(m0='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -85,15 +86,12 @@ CLOUDINARY_STORAGE = {
     'API_SECRET' : 'T4NAwcoZw90e1y4kFSztwdpD5j0',
 }
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blogdata',
-        'USER': 'postgres',
-        'PASSWORD': 'anshu143',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://postgre:SmaLp6yF7CXbA5rQJrm6mQ2kVbxjw4O1@dpg-d18ki6ili9vc73fl5v0g-a.oregon-postgres.render.com/blogdata_3r24',
+        engine='django.db.backends.postgresql'
+    )
 }
 
 
